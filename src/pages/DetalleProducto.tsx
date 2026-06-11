@@ -93,14 +93,32 @@ export default function DetalleProducto() {
   return (
     <>
       <Helmet>
-        <title>{producto.title} — TiendaApp</title>
-        <meta name="description" content={producto.description.slice(0, 150)} />
-        <meta property="og:title" content={`${producto.title} — TiendaApp`} />
+        <title>
+          {producto ? `${producto.title} — TiendaApp` : "Producto — TiendaApp"}
+        </title>
+        <meta
+          name="description"
+          content={
+            producto
+              ? producto.description.slice(0, 150)
+              : "Detalle de producto en TiendaApp."
+          }
+        />
+        <meta
+          property="og:title"
+          content={
+            producto ? `${producto.title} — TiendaApp` : "Producto — TiendaApp"
+          }
+        />
         <meta
           property="og:description"
-          content={producto.description.slice(0, 150)}
+          content={
+            producto
+              ? producto.description.slice(0, 150)
+              : "Detalle de producto en TiendaApp."
+          }
         />
-        <meta property="og:image" content={producto.image} />
+        <meta property="og:image" content={producto?.image ?? ""} />
         <meta property="og:type" content="product" />
       </Helmet>
 
