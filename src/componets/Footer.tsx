@@ -9,7 +9,6 @@ export default function Footer() {
           <span>TiendaApp</span>
         </div>
         <p className="footer-copy">© 2026 — Catálogo de Productos</p>
-        <p className="footer-tech">React + TypeScript + FakeStoreAPI</p>
       </div>
     </footer>
   );
