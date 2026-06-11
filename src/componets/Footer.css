@@ -1,0 +1,51 @@
+.footer {
+  background: #1a1a2e;
+  color: #6b6b7b;
+  padding: 32px 60px;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.footer-brand .brand-icon {
+  color: #c9a96e;
+  font-size: 18px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #6b6b7b;
+}
+
+.footer-tech {
+  font-size: 12px;
+  color: #3d3d50;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+}

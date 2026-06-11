@@ -1,0 +1,302 @@
+.usuarios-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ==========================================
+   ENCABEZADO
+   ========================================== */
+
+.usuarios-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.usuarios-header p {
+  color: #6b6b7b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ==========================================
+   RESUMEN
+   ========================================== */
+
+.usuarios-resumen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.resumen-card {
+  background: white;
+  border: 1px solid #e8e4df;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: box-shadow 0.2s;
+}
+
+.resumen-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.resumen-numero {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -1px;
+}
+
+.resumen-numero.admin {
+  color: #c9a96e;
+}
+
+.resumen-numero.user {
+  color: #6b9ec9;
+}
+
+.resumen-label {
+  font-size: 13px;
+  color: #6b6b7b;
+  font-weight: 500;
+}
+
+/* ==========================================
+   TABLA
+   ========================================== */
+
+.tabla-wrap {
+  background: white;
+  border: 1px solid #e8e4df;
+  border-radius: 16px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.tabla thead tr {
+  background: #f9f7f4;
+  border-bottom: 1px solid #e8e4df;
+}
+
+.tabla th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b6b7b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tabla tbody tr {
+  border-bottom: 1px solid #f3f0eb;
+  transition: background 0.15s;
+}
+
+.tabla tbody tr:last-child {
+  border-bottom: none;
+}
+
+.tabla tbody tr:hover {
+  background: #fafaf8;
+}
+
+.tabla td {
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+.usuario-id {
+  font-size: 13px;
+  color: #6b6b7b;
+  font-weight: 500;
+}
+
+.usuario-nombre-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+  color: white;
+}
+
+.usuario-avatar.admin {
+  background: #c9a96e;
+}
+
+.usuario-avatar.user {
+  background: #6b9ec9;
+}
+
+.usuario-nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.usuario-email {
+  font-size: 13px;
+  color: #6b6b7b;
+}
+
+.usuario-password {
+  font-size: 13px;
+  color: #6b6b7b;
+  font-family: monospace;
+  background: #f3f0eb;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.rol-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.rol-badge.admin {
+  background: #fef3e2;
+  color: #c9a96e;
+}
+
+.rol-badge.user {
+  background: #eff6ff;
+  color: #6b9ec9;
+}
+
+.permisos {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.permiso {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.permiso.si {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.permiso.no {
+  background: #f9f7f4;
+  color: #c4c4c4;
+  text-decoration: line-through;
+}
+
+/* ==========================================
+   ROLES INFO
+   ========================================== */
+
+.roles-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rol-info-card {
+  background: white;
+  border: 1px solid #e8e4df;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.rol-info-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.rol-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rol-dot.admin {
+  background: #c9a96e;
+}
+
+.rol-dot.user {
+  background: #6b9ec9;
+}
+
+.rol-info-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.rol-permisos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rol-permisos-lista li {
+  font-size: 13px;
+  color: #6b6b7b;
+}
+
+.rol-permisos-lista li.no-permitido {
+  color: #c4c4c4;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+  .usuarios-resumen {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .roles-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .usuarios-resumen {
+    grid-template-columns: 1fr;
+  }
+
+  .permisos {
+    gap: 4px;
+  }
+}

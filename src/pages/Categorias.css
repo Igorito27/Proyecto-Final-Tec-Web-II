@@ -1,0 +1,247 @@
+.categorias-page {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ==========================================
+   ENCABEZADO
+   ========================================== */
+
+.categorias-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.categorias-header p {
+  color: #6b6b7b;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ==========================================
+   LISTA
+   ========================================== */
+
+.categorias-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ==========================================
+   SECCIÓN DE CATEGORÍA
+   ========================================== */
+
+.categoria-seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoria-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e4df;
+}
+
+.categoria-cabecera-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.categoria-icono {
+  font-size: 36px;
+  width: 60px;
+  height: 60px;
+  background: #f3f0eb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.categoria-nombre {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+
+.categoria-desc {
+  font-size: 13px;
+  color: #6b6b7b;
+  margin: 0;
+}
+
+.ver-todos-btn {
+  background: none;
+  border: 1px solid #e8e4df;
+  color: #c9a96e;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.ver-todos-btn:hover {
+  background: #f3f0eb;
+  border-color: #c9a96e;
+}
+
+/* ==========================================
+   PREVIEW CARDS
+   ========================================== */
+
+.categoria-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.preview-card {
+  background: white;
+  border: 1px solid #e8e4df;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.preview-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  border-color: #c9a96e;
+}
+
+.preview-img-wrap {
+  background: #f9f7f4;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+}
+
+.preview-img {
+  max-height: 110px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+
+.preview-card:hover .preview-img {
+  transform: scale(1.05);
+}
+
+.preview-info {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.preview-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a2e;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.preview-precio {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a2e;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   ESTADOS
+   ========================================== */
+
+.categorias-estado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 0;
+  color: #6b6b7b;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e8e4df;
+  border-top-color: #c9a96e;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.categorias-error {
+  background: #fff0f0;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .categoria-preview {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .categoria-cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .categoria-preview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categoria-icono {
+    font-size: 28px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .categoria-nombre {
+    font-size: 16px;
+  }
+
+  .preview-img-wrap {
+    height: 120px;
+    padding: 16px;
+  }
+}
