@@ -65,8 +65,14 @@ export default function Categorias() {
         <title>Categorías — TiendaApp</title>
         <meta
           name="description"
+          content="Explora productos por categoría: ropa, joyería y electrónica."
+        />
+        <meta property="og:title" content="Categorías — TiendaApp" />
+        <meta
+          property="og:description"
           content="Explora productos por categoría en TiendaApp."
         />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="categorias-page">

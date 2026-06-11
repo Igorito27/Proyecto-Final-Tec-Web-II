@@ -94,7 +94,14 @@ export default function DetalleProducto() {
     <>
       <Helmet>
         <title>{producto.title} — TiendaApp</title>
-        <meta name="description" content={producto.description} />
+        <meta name="description" content={producto.description.slice(0, 150)} />
+        <meta property="og:title" content={`${producto.title} — TiendaApp`} />
+        <meta
+          property="og:description"
+          content={producto.description.slice(0, 150)}
+        />
+        <meta property="og:image" content={producto.image} />
+        <meta property="og:type" content="product" />
       </Helmet>
 
       <div className="detalle-page">

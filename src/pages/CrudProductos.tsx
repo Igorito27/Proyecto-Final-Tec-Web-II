@@ -273,6 +273,8 @@ export default function CrudProductos() {
           name="description"
           content="Panel de administración de productos."
         />
+        <meta property="og:title" content="Gestión de Productos — TiendaApp" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="crud-page">

@@ -1,10 +1,12 @@
-import Home from "../pages/Home";
-import Productos from "../pages/Productos";
-import DetalleProducto from "../pages/DetalleProducto";
-import CrudProductos from "../pages/CrudProductos";
-import Usuarios from "../pages/Usuarios";
-import Categorias from "../pages/Categorias";
-import NotFound from "../pages/NotFound";
+import { lazy } from "react";
+
+const Home = lazy(() => import("../pages/Home"));
+const Productos = lazy(() => import("../pages/Productos"));
+const DetalleProducto = lazy(() => import("../pages/DetalleProducto"));
+const CrudProductos = lazy(() => import("../pages/CrudProductos"));
+const Usuarios = lazy(() => import("../pages/Usuarios"));
+const Categorias = lazy(() => import("../pages/Categorias"));
+const NotFound = lazy(() => import("../pages/NotFound"));
 
 export type AppRoute = {
   name: string;

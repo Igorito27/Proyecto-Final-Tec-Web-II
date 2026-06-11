@@ -41,7 +41,12 @@ export default function Usuarios() {
     <>
       <Helmet>
         <title>Usuarios — TiendaApp</title>
-        <meta name="description" content="Gestión de usuarios del sistema." />
+        <meta
+          name="description"
+          content="Gestión de usuarios del sistema TiendaApp."
+        />
+        <meta property="og:title" content="Usuarios — TiendaApp" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="usuarios-page">

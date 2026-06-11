@@ -8,7 +8,9 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>404 — Página no encontrada</title>
+        <title>404 — Página no encontrada | TiendaApp</title>
+        <meta name="description" content="La página que buscas no existe." />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <div className="notfound-page">
