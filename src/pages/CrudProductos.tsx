@@ -319,6 +319,9 @@ export default function CrudProductos() {
                           src={prod.image}
                           alt={prod.title}
                           className="tabla-img"
+                          width={40}
+                          height={40}
+                          loading="lazy"
                         />
                       </div>
                     </td>

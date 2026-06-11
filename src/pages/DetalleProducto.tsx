@@ -115,6 +115,8 @@ export default function DetalleProducto() {
               src={producto.image}
               alt={producto.title}
               className="detalle-img"
+              width={300}
+              height={300}
             />
           </div>
 

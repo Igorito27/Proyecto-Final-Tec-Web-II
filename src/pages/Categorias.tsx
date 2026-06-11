@@ -134,6 +134,9 @@ export default function Categorias() {
                             src={prod.image}
                             alt={prod.title}
                             className="preview-img"
+                            width={110}
+                            height={110}
+                            loading="lazy"
                           />
                         </div>
                         <div className="preview-info">

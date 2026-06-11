@@ -159,6 +159,9 @@ export default function Productos() {
                     src={producto.image}
                     alt={producto.title}
                     className="producto-img"
+                    width={130}
+                    height={130}
+                    loading="lazy"
                   />
                 </div>
                 <div className="producto-info">
