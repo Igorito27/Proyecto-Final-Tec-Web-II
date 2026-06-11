@@ -2,12 +2,14 @@ import "./App.css";
 import { Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-
 import Login from "./pages/Login";
-import NotFound from "./pages/NotFound";
 import { routes } from "./data/Routes";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import Layout from "./componets/Layout";
+
+// ==========================================
+// FALLBACK
+// ==========================================
 
 function PageLoader() {
   return (
@@ -33,6 +35,10 @@ function PageLoader() {
   );
 }
 
+// ==========================================
+// RUTA PROTEGIDA
+// ==========================================
+
 type ProtectedProps = {
   element: React.ReactElement;
   adminOnly?: boolean;
@@ -45,7 +51,13 @@ function ProtectedRoute({ element, adminOnly }: ProtectedProps) {
   return element;
 }
 
+// ==========================================
+// RUTAS
+// ==========================================
+
 function AppRoutes() {
+  const notFoundRoute = routes.find((r) => r.path === "*");
+
   return (
     <BrowserRouter>
       <Suspense fallback={<PageLoader />}>
@@ -70,12 +82,19 @@ function AppRoutes() {
               ))}
           </Route>
 
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="*"
+            element={notFoundRoute ? notFoundRoute.element : null}
+          />
         </Routes>
       </Suspense>
     </BrowserRouter>
   );
 }
+
+// ==========================================
+// APP
+// ==========================================
 
 export default function App() {
   return (
