@@ -5,13 +5,14 @@
 }
 
 .footer-inner {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
+  flex-direction: column;
 }
 
 .footer-brand {

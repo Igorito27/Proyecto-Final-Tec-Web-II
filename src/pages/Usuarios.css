@@ -41,10 +41,6 @@
   transition: box-shadow 0.2s;
 }
 
-.resumen-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
-}
-
 .resumen-numero {
   font-size: 36px;
   font-weight: 700;
@@ -108,10 +104,6 @@
   border-bottom: none;
 }
 
-.tabla tbody tr:hover {
-  background: #fafaf8;
-}
-
 .tabla td {
   padding: 14px 16px;
   vertical-align: middle;
@@ -139,15 +131,15 @@
   font-size: 14px;
   font-weight: 700;
   flex-shrink: 0;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .usuario-avatar.admin {
-  background: #c9a96e;
+  background: #f2bd6d;
 }
 
 .usuario-avatar.user {
-  background: #6b9ec9;
+  background: #66a8fd;
 }
 
 .usuario-nombre {
@@ -180,13 +172,13 @@
 }
 
 .rol-badge.admin {
-  background: #fef3e2;
-  color: #c9a96e;
+  background: #f2bd6d;
+  color: #3b3535;
 }
 
 .rol-badge.user {
-  background: #eff6ff;
-  color: #6b9ec9;
+  background: #b3d4ff;
+  color: #3b3535;
 }
 
 .permisos {
@@ -212,10 +204,6 @@
   color: #c4c4c4;
   text-decoration: line-through;
 }
-
-/* ==========================================
-   ROLES INFO
-   ========================================== */
 
 .roles-info {
   display: grid;
@@ -276,10 +264,6 @@
 .rol-permisos-lista li.no-permitido {
   color: #c4c4c4;
 }
-
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
 
 @media (max-width: 768px) {
   .usuarios-resumen {

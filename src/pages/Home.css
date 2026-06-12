@@ -10,18 +10,20 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
-  padding: 60px 0 20px;
+  padding: 10px 0 20px;
+  max-width: 100%;
 }
 
 .hero-text {
-  flex: 1;
-  max-width: 520px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-tag {
-  display: inline-block;
+  display: flex;
   background: #ffffff;
   color: #e8b75c;
   font-size: 12px;
@@ -30,7 +32,8 @@
   text-transform: uppercase;
   padding: 6px 14px;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+  max-width: fit-content;
 }
 
 .hero-text h1 {
@@ -40,6 +43,8 @@
   color: #1a1a2e;
   letter-spacing: -1.5px;
   margin-bottom: 16px;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-highlight {
@@ -57,63 +62,9 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-}
-
-/* Visual flotante */
-hero-visual {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: flex-end;
-}
-
-.hero-card {
-  background: white;
-  border: 1px solid #e8e4df;
-  border-radius: 16px;
-  padding: 16px 24px;
-  display: flex;
   align-items: center;
-  gap: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  min-width: 160px;
+  justify-content: center;
 }
-
-.hero-card-icon {
-  font-size: 24px;
-}
-
-.hero-card p {
-  font-size: 14px;
-  font-weight: 600;
-  color: #1a1a2e;
-  margin: 0;
-}
-
-/* Animacion flotante */
-/*@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.floating {
-  animation: float 3s ease-in-out infinite;
-}
-
-.delay-1 {
-  animation-delay: 0.5s;
-}
-
-.delay-2 {
-  animation-delay: 1s;
-}*/
-
-/* BOTONES GLOBALES */
 
 .btn-primary {
   background: #1a1a2e;
@@ -161,10 +112,6 @@ hero-visual {
   opacity: 0.75;
 }
 
-/* ==========================================
-   WELCOME BANNER
-   ========================================== */
-
 .welcome-banner {
   background: white;
   border: 1px solid #e8e4df;
@@ -178,6 +125,8 @@ hero-visual {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .welcome-text h3 {
@@ -185,6 +134,7 @@ hero-visual {
   font-weight: 600;
   color: #1a1a2e;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .welcome-text p {
@@ -192,30 +142,6 @@ hero-visual {
   font-size: 14px;
   margin: 0;
 }
-
-.welcome-badge {
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  flex-shrink: 0;
-}
-
-.welcome-badge.admin {
-  background: #fef3e2;
-  color: #c9a96e;
-}
-
-.welcome-badge.user {
-  background: #eff6ff;
-  color: #6b9ec9;
-}
-
-/* ==========================================
-   ESTADÍSTICAS
-   ========================================== */
 
 .stats-section {
   display: grid;

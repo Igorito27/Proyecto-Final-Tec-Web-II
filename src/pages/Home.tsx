@@ -24,7 +24,6 @@ export default function Home() {
       </Helmet>
 
       <div className="home">
-        {/* Hero */}
         <section className="hero">
           <div className="hero-text">
             <span className="hero-tag">Catálogo de Productos</span>
@@ -51,39 +50,19 @@ export default function Home() {
               </button>
             </div>
           </div>
-
-          <div className="hero-visual">
-            <div className="hero-card floating">
-              <span className="hero-card-icon">🛍️</span>
-              <p>+20 productos</p>
-            </div>
-            <br />
-            <div className="hero-card floating delay-1">
-              <span className="hero-card-icon">📦</span>
-              <p>4 categorías</p>
-            </div>
-            <br />
-            <div className="hero-card floating delay-2">
-              <span className="hero-card-icon">⭐</span>
-              <p>Mejor calidad</p>
-            </div>
-          </div>
         </section>
 
         {/* Bienvenida personalizada */}
         <section className="welcome-banner">
           <div className="welcome-content">
             <div className="welcome-text">
-              <h3>Hola, {user?.name} 👋</h3>
+              <h3>Bienvenido, {user?.name} </h3>
               <p>
                 {user?.role === "admin"
                   ? "Tienes acceso completo. Puedes gestionar productos y usuarios desde el menú."
                   : "Explora el catálogo y descubre nuestros productos disponibles."}
               </p>
             </div>
-            <span className={`welcome-badge ${user?.role}`}>
-              {user?.role === "admin" ? "Administrador" : "Usuario"}
-            </span>
           </div>
         </section>
 

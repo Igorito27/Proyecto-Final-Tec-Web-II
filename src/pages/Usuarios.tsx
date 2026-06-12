@@ -160,8 +160,6 @@ export default function Usuarios() {
               <li>✦ Ver catálogo de productos</li>
               <li>✦ Ver detalle de productos</li>
               <li>✦ Explorar categorías</li>
-              <li className="no-permitido">✕ Sin acceso a CRUD</li>
-              <li className="no-permitido">✕ Sin acceso a usuarios</li>
             </ul>
           </div>
         </div>

@@ -122,9 +122,9 @@
 .tabla-categoria {
   font-size: 11px;
   font-weight: 600;
-  color: #c9a96e;
+  color: #000000;
   text-transform: capitalize;
-  background: #fef3e2;
+  background: #ffe7c4;
   padding: 4px 10px;
   border-radius: 12px;
 }

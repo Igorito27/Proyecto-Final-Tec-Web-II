@@ -29,7 +29,7 @@ export default function Login() {
       if (success) {
         navigate("/");
       } else {
-        setError("Correo o contraseña incorrectos.");
+        setError("Credenciales inválidas.");
       }
       setLoading(false);
     }, 800);
@@ -51,8 +51,8 @@ export default function Login() {
         <meta property="og:type" content="website" />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
+
       <div className="login-page">
-        {/* Panel izquierdo */}
         <div className="login-left">
           <div className="login-left-content">
             <span className="login-brand-icon">◈</span>
@@ -81,7 +81,7 @@ export default function Login() {
           <div className="login-box">
             <div className="login-header">
               <h2>Bienvenido</h2>
-              <p>Ingresa tus credenciales para continuar</p>
+              <p>Ingresa tus datos para continuar</p>
             </div>
 
             <form onSubmit={handleSubmit} className="login-form">
@@ -114,7 +114,7 @@ export default function Login() {
               </button>
             </form>
 
-            <div className="login-hints">
+            {/*<div className="login-hints">
               <p className="hints-title">Usuarios de prueba</p>
               <div
                 className="hint-item"
@@ -142,7 +142,7 @@ export default function Login() {
                   <p>user123 — Usuario</p>
                 </div>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
